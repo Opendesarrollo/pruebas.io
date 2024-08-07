@@ -1,0 +1,463 @@
+/**
+* Estilos a la barra de navegacion
+*
+* @id #barraDeNavegacion
+*
+*/
+
+#barraDeNavegacion{
+    grid-template-columns: 200px repeat(1, 1fr);
+    padding: 10px 65px 10px 65px;
+}
+#barraDeNavegacion .barraDeNavegacion_logo a p{
+    font-size: calc(var(--textoTitiloContenido) + 2px);
+}
+#barraDeNavegacion .barraDeNavegacion_boton{
+    display: none;
+}
+/* menu_boton */
+#barraDeNavegacion .barraDeNavegacion_menu{
+    all: revert;
+}
+#barraDeNavegacion .barraDeNavegacion_menu ul{
+    all: revert;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+}
+#barraDeNavegacion .barraDeNavegacion_menu ul li a{
+    all: revert;
+    font-size: var(--textoContenido);
+    font-weight: 700;
+    color: #333333;
+    text-decoration: none;
+}
+#barraDeNavegacion .barraDeNavegacion_menu ul li:not(:last-child){
+    margin-right: 50px;
+}
+
+/**
+* Estilos a la cabecera de index
+*
+* @id #cabeceraInicio
+*
+*/
+
+#cabeceraInicio{
+    padding: 0px 65px 50px 65px;
+}
+/*  */
+#cabeceraInicio .cabeceraInicio_caja .cabeceraInicio_caja_titulo{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+#cabeceraInicio .cabeceraInicio_caja .cabeceraInicio_caja_titulo figure{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    padding: 16px 16px 16px 16px;
+}
+#cabeceraInicio .cabeceraInicio_caja .cabeceraInicio_caja_titulo figure img{
+    width: 500px;
+    height: 500px;
+}
+#cabeceraInicio .cabeceraInicio_caja .cabeceraInicio_caja_titulo div{
+    align-items: start;
+    text-align: revert;
+    padding: 16px 16px 16px 16px;
+}
+#cabeceraInicio .cabeceraInicio_caja .cabeceraInicio_caja_titulo div p{
+    font-size: var(--textoTitiloContenido);
+}
+/*  */
+#cabeceraInicio .cabeceraInicio_caja .cabeceraInicio_caja_clientes{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/**
+* Estilos a la barra de navegacion
+*
+* @id #portafolioProyectos
+*
+*/
+
+#portafolioProyectos{
+    padding: 0px 65px 50px 65px;
+}
+#portafolioProyectos .portafolioProyectos_listado ul{
+    grid-template-columns: repeat(3, 1fr);
+}
+#portafolioProyectos .portafolioProyectos_listado ul li a div:nth-child(1){
+    height: 150px;
+}
+#portafolioProyectos .portafolioProyectos_listado ul li a div:nth-child(1) img{
+    height: 150px;
+}
+#portafolioProyectos .portafolioProyectos_listado ul li a div:nth-child(3){
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*
+START: Iconos --------------------------------------------------------------------------------------
+*/
+
+.iconos--{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 65px 50px 65px;
+}
+.iconos-- article{
+    width: 330px;
+}
+.iconos-- .unico{
+    margin: 0px;
+}
+
+/*
+START: Inicio principal ----------------------------------------------------------------------------
+*/
+
+#inicioPrincipal{
+    padding: 0px 65px 50px 65px;
+}
+#inicioPrincipal .inicioPrincipal_detalle{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*
+START: Preguntas --------------------------------------------------------------------------------------
+*/
+
+.preguntas-{
+    padding: 100px 65px 50px 65px;
+}
+.preguntas- div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.preguntas- article{
+    width: 550px;
+}
+.preguntas- div .unico{
+    margin: 0px;
+}
+.preguntas- div .unicoUno{
+    margin: 0px;
+}
+.preguntas- div .bottom{
+    margin-bottom: 50px;
+}
+.preguntas- .menu{
+    width: 700px;
+}
+.preguntas- .menu main p{
+    font-size: 1.6rem;
+    margin: 0px 0px 40px 0px;
+}
+.preguntas- .menu footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preguntas- .menu footer a{
+    width: 290px;
+}
+
+/**
+* Estilos a la seccion de precios
+*
+* @id #precioDetalle
+*
+*/
+
+#precioDetalle{
+    all: unset;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    gap: 24px;
+    padding: 0px 65px 50px 65px;
+}
+#precioDetalle .precioDetalle_listado{
+    all: unset;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    align-items: center;
+    gap: 24px;
+}
+#precioDetalle .precioDetalle_listado .precioDetalle_listado_caja{
+    all: unset;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    border: 1px solid rgba(0,0,0,.125);
+}
+#precioDetalle .precioDetalle_listado .precioDetalle_listado_caja:not(:last-child){
+    margin-right: 0px;
+}
+
+/*
+START: Equipo --------------------------------------------------------------------------------------
+*/
+
+#portafolio{
+    padding: 50px 65px 50px 65px;
+}
+#portafolio .portafolio_equipo{
+    grid-template-columns: repeat(3, 1fr);
+}
+#portafolio .portafolio_equipo .portafolio_equipo_persona{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+#portafolio .portafolio_documentos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 400px; */
+    place-content: center center;
+    /* grid-auto-flow: row; */
+    /* grid-auto-rows: 400px; */
+}
+#portafolio .portafolio_documentos a div:nth-child(1) img{
+    width: 100%;
+}
+
+/*
+START: Proyectos -----------------------------------------------------------------------------------
+*/
+
+.proyectos-{
+    display: grid;
+    grid-template: repeat(2, 400px) / repeat(3, 325px);
+    justify-content: space-between;
+    padding: 50px 65px 50px 65px;
+}
+.proyectos- article header a img{
+    width: 325px;
+}
+
+/*
+START: blog ----------------------------------------------------------------------------------------
+*/
+
+#headerBlog{
+    display: grid;
+    grid-template-columns: repeat(1, 900px);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    gap: 8px;
+    padding: 100px 65px 50px 65px;
+}
+/*  */
+#headerBlog .headerBlog_cero h1{
+    font-size: var(--textoTitulo);
+}
+
+/*
+START: blog contenido ------------------------------------------------------------------------------
+*/
+
+#mainBlog{
+    display: grid;
+    grid-template-columns: repeat(1, 900px);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    gap: 24px;
+    padding: 50px 65px 50px 65px;
+    background: #f1f6fa;
+}
+/*  */
+#mainBlog .mainBlog_cero ul li a div:nth-child(1) h3{
+    font-size: var(--textoTitiloContenido);
+    margin: 0px 0px 4px 0px;
+}
+#mainBlog .mainBlog_cero ul li a div:nth-child(1) p{
+    display: revert;
+    margin: 0px 0px 8px 0px;
+    font-size: var(--textoContenido);
+}
+
+/*
+START: Detalles Pagina ------------------------------------------------------------------------------
+*/
+
+#detallesPagina{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 500px; */
+    /* place-content: center center; */
+    padding: 50px 65px 50px 65px;
+    gap: 24px;
+}
+#detallesPagina section ul{
+    flex-direction: column;
+    justify-content: start;
+    height: revert;
+}
+#detallesPagina section ul li a{
+    margin-top: 8px;
+}
+#detallesPagina section:nth-child(5){
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+}
+
+/*
+START: Descubre ------------------------------------------------------------------------------------
+*/
+
+#descubre{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: ; */
+    /* place-content: center center; */
+    gap: 24px;
+    padding: 25px 65px 50px 65px;
+    background: white;
+}
+/*  */
+#descubre .descubre_titulo div h2{
+    font-size: var(--textoTitulo);
+    font-weight: 500;
+    text-align: revert;
+}
+/*  */
+#descubre .descubre_disfruta{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: ; */
+    /* place-content: center center; */
+    gap: 24px;
+}
+
+/*
+START: En familia ------------------------------------------------------------------------------------
+*/
+
+#enFamilia{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: ; */
+    /* place-content: center center; */
+    gap: 24px;
+    padding: 50px 65px 25px 65px;
+    background: white;
+}
+/*  */
+#enFamilia .enFamilia_titulo div h2{
+    font-size: var(--textoTitulo);
+    font-weight: 500;
+    text-align: revert;
+}
+/*  */
+#enFamilia .enFamilia_disfruta ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: ; */
+    /* place-content: center center; */
+    gap: 24px;
+}
+
+/*
+START: Suscribete ------------------------------------------------------------------------------------
+*/
+
+#suscribete{
+    display: grid;
+    grid-template-columns: repeat(1, 900px);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    gap: 24px;
+    padding: 50px 65px 50px 65px;
+    background: #f1f6fa;
+}
+
+/*
+START: publicoImagen ------------------------------------------------------------------------------------
+*/
+
+#publicoImagen{
+    padding: 0px 65px 0px 65px;
+}
+/*  */
+#publicoImagen section div img{
+    height: 250px;
+}
+
+/* *************************************************************************************************
+blog_detalle.html
+************************************************************************************************* */
+
+/*
+START: header --------------------------------------------------------------------------------------
+*/
+
+#blogDetalleCabecera{
+    display: grid;
+    grid-template-columns: repeat(1, 900px);
+    /* grid-template-rows: ; */
+    place-content: center center;
+    gap: 8px;
+    padding: 100px 65px 50px 65px;
+}
+/*  */
+#blogDetalleCabecera .blogDetalleCabecera_cero h1{
+    font-size: var(--textoTitulo);
+}
+
+/*
+START: main ----------------------------------------------------------------------------------------
+*/
+
+#blogDetalleCuerpo{
+    grid-template-columns: 40px calc(900px - 64px);
+    padding: 25px 65px 50px 65px;
+}
+/*  */
+#blogDetalleCuerpo .blogDetalleCuerpo_redes .blogDetalleCuerpo_redes_titulo{
+    display: none;
+}
+#blogDetalleCuerpo .blogDetalleCuerpo_redes .blogDetalleCuerpo_redes_listado{
+    justify-content: revert;
+    flex-direction: column;
+    position: sticky;
+    top: -1px;
+}
+#blogDetalleCuerpo .blogDetalleCuerpo_redes .blogDetalleCuerpo_redes_listado li:not(:last-child){
+    margin-bottom: 8px;
+}
+/*  */
+
+/**
+* Estilos al metodo de contacto
+*
+* @id #contacto
+*
+*/
+
+#contacto{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 65px 50px 65px;
+}
+#contacto .contacto_imagen{
+    display: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contacto .contacto_imagen figure{
+    width: 400px;
+    height: 400px;
+}
+#contacto .contacto_imagen figure img{
+    width: 400px;
+    height: 400px;
+}

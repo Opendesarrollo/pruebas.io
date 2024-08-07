@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Start: detalles de la pagina -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="SQL, Comentarios, Legibilidad de código, Mejoras de código, Buenas prácticas, Lenguaje claro, Estructura de tablas, Documentación de cambios, Consejos de programación y Desarrollo de software.">
+    <title>Cómo mejorar la legibilidad del código SQL con comentarios - DataPrivacity</title>
+    <meta name="description" content="¿Problemas con código SQL? En nuestro blog, aprende a mejorar su legibilidad con comentarios efectivos. Descubre consejos útiles y mejora tus habilidades de programación SQL. ¡No te lo pierdas!">
+    <link rel="canonical" href="https://dataprivacity.com/blog/mejorar-legibilidad-codigo-sql-comentarios" />
+    <!-- End: detalles de la pagina -->
+
+    <!-- Start: Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Cómo mejorar la legibilidad del código SQL con comentarios">
+    <meta property="og:description" content="¿Problemas con código SQL? En nuestro blog, aprende a mejorar su legibilidad con comentarios efectivos. Descubre consejos útiles y mejora tus habilidades de programación SQL. ¡No te lo pierdas!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://debug.dataprivacity.com/blog/mejorar-legibilidad-codigo-sql-comentarios">
+    <meta property="og:image" content="https://dataprivacity.com/assets/images/blog/blog.jpg">
+    <!-- End: Open Graph para compartir en redes sociales -->
+
+    <!-- Start: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@DataPrivacity">
+    <meta name="twitter:title" content="Cómo mejorar la legibilidad del código SQL con comentarios">
+    <meta name="twitter:description" content="¿Problemas con código SQL? En nuestro blog, aprende a mejorar su legibilidad con comentarios efectivos. Descubre consejos útiles y mejora tus habilidades de programación SQL. ¡No te lo pierdas!">
+    <meta name="twitter:image" content="https://debug.dataprivacity.com/assets/images/blog/blog.jpg">
+    <!-- End: Twitter Card -->
+
+    <!-- Start: icono -->
+    <link rel="icon" type="image/png" href="../assets/images/cabecera/logo.png">
+    <!-- End: icono -->
+
+    <!-- Start: estilos -->
+    <link rel="stylesheet" href="../assets/styles/origen.css" />
+    <link rel="stylesheet" media="(min-width: 480px)" href="../assets/styles/movil.css" />
+    <link rel="stylesheet" media="(min-width: 768px)" href="../assets/styles/tableta.css" />
+    <link rel="stylesheet" media="(min-width: 1024px)" href="../assets/styles/computadora.css" />
+    <!-- End: estilos -->
+
+    <!-- Start: fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <!-- Fuente estecial para el blog -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- End: fuente -->
+    
+    <!-- Start: Prism para resaltar -->
+    <link rel="stylesheet" href="../assets/custom/styles/prism/prism.min.css" />
+    <style>
+        .codigo{
+            max-width: 100% !important;
+            overflow-x: auto !important;
+        }
+        .codigo pre{
+            background: white;
+            border-radius: 14px;
+            margin: 0;
+        }
+    </style>
+    <!-- Start: Prism para resaltar -->
+
+</head>
+<body>
+    
+    <nav class="caja">
+
+        <article id="barraDeNavegacion">
+            <section class="barraDeNavegacion_logo">
+                <a href="../">
+                    <img src="../assets/images/cabecera/logo.png" alt="Logo">
+                    <p>DataPrivacity</p>
+                </a>
+            </section>
+            <input type="checkbox" id="miMenu">
+            <section class="barraDeNavegacion_boton">
+                <div>
+                    <label for="miMenu"><span></span></label>
+                </div>
+            </section>
+            <section class="barraDeNavegacion_menu">
+                <ul>
+                    <li>
+                        <a href="../">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./">Blog</a>
+                    </li>
+                    <li>
+                        <a href=".././portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href=".././precios">Precios</a>
+                    </li>
+                    <li>
+                        <a href=".././contacto">Contacto</a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+    </nav>
+    
+    <header class="caja">
+
+        <article id="blogDetalleCabecera">
+            <section class="blogDetalleCabecera_cero">
+                <div>
+                    <h1>Cómo mejorar la legibilidad del código SQL con comentarios</h1>
+                </div>
+            </section>
+            <section class="blogDetalleCabecera_uno">
+                <a href="https://gitlab.com/DataPrivacity" target="_blank">
+                    <p>Código en Gitlab.com/DataPrivacity</p>
+                </a>
+            </section>
+            <section class="blogDetalleCabecera_dos">
+                <a href="./../soyceros" target="_blank">
+                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                    <p>soyceros</p>
+                </a>
+                <div>
+                    <p>15056 Puntos</p>
+                </div>
+                <div>
+                    <p>Hace 3 días</p>
+                </div>
+            </section>
+        </article>
+
+    </header>
+
+    <main class="caja">
+        
+        <article id="blogDetalleCuerpo">
+            <section class="blogDetalleCuerpo_redes">
+                <div class="blogDetalleCuerpo_redes_titulo">
+                    <p>Comparte en:</p>
+                </div>
+                <ul class="blogDetalleCuerpo_redes_listado">
+                    <li>
+                        <a href="" class="encanta" target="_blank">
+                            <img src="../assets/images/blog/encanta.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?url=https://dataprivacity.com/blog/mejorar-legibilidad-codigo-sql-comentarios" class="red" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/images/blog/twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://dataprivacity.com/blog/mejorar-legibilidad-codigo-sql-comentarios" class="red" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/images/blog/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dataprivacity.com/blog/mejorar-legibilidad-codigo-sql-comentarios" class="red" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/images/blog/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="blogDetalleCuerpo_contenido">
+                <div>
+                    <p>
+                        Cuando trabajas con código SQL, es común encontrarte con consultas o scripts largos y complejos que pueden resultar difíciles de entender. Los comentarios son una herramienta que puedes utilizar para agregar notas explicativas al código, lo que puede hacer que sea más fácil de entender y mantener.
+                    </p>
+                </div>
+                <div>
+                    <h2>En SQL, los comentarios pueden ser de dos tipos:</h2>
+                </div>
+                <div>
+                    <p>
+                        <strong>1.</strong> Comentarios de línea: se escriben después de dos guiones seguidos (--). Todo lo que se escriba después de los guiones se considera un comentario y es ignorado por el sistema. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+SELECT *
+FROM clientes
+WHERE ciudad = 'Madrid' -- Esta consulta devuelve la información de los clientes de Madrid
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        En este caso, el comentario se utiliza para explicar lo que hace la consulta y proporcionar información adicional.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <strong>2.</strong> Comentarios de bloque: se escriben entre /* y */. Todo lo que se escriba entre estos símbolos se considera un comentario y es ignorado por el sistema. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+/*
+Este es un ejemplo de comentario de bloque en SQL.
+Puede utilizarse para agregar notas más largas y detalladas sobre el código,
+como una explicación de cómo funciona una función o una descripción de la
+estructura de una tabla.
+
+En este caso, estamos creando una nueva tabla llamada "ventas" que contendrá
+información sobre las ventas de nuestros productos en diferentes regiones.
+*/
+
+CREATE TABLE ventas (
+producto_id INT NOT NULL,
+venta_id INT PRIMARY KEY,
+venta_fecha DATE NOT NULL,
+venta_region VARCHAR(50) NOT NULL,
+venta_cantidad INT NOT NULL
+);
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        En este ejemplo, el comentario de bloque se utiliza para proporcionar información detallada sobre la nueva tabla que se está creando. El comentario describe el propósito de la tabla y los campos que se están creando, lo que puede ayudar a otros desarrolladores a entender el código de manera más efectiva.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Agregar comentarios a tu código SQL es una buena práctica, ya que puede hacer que el código sea más fácil de entender y mantener. Sin embargo, es importante no abusar de los comentarios, ya que demasiados comentarios pueden hacer que el código sea difícil de leer y comprender.
+                    </p>
+                </div>
+                <div>
+                    <h3>Aquí te dejamos algunos consejos para utilizar comentarios de manera efectiva en tu código SQL:</h3>
+                </div>
+                <div>
+                    <p>
+                        <strong>1.</strong> Escribe comentarios que sean claros y concisos: Los comentarios deben ser fáciles de leer y entender. Utiliza un lenguaje claro y evita la jerga técnica innecesaria.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <strong>2.</strong> Utiliza comentarios para explicar la lógica de tu código: Los comentarios son especialmente útiles para explicar la lógica detrás de una consulta compleja o un script largo. Si hay algún proceso que pueda ser difícil de entender para alguien que no esté familiarizado con el código, incluye un comentario que lo explique.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <strong>3.</strong> Añade comentarios para describir la estructura de las tablas: Si estás trabajando con tablas grandes y complejas, es útil agregar comentarios que describan la estructura de la tabla. Esto puede incluir la descripción de las columnas, la clave primaria, las claves foráneas, entre otros detalles relevantes.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <strong>4.</strong> Utiliza comentarios para documentar los cambios: Si haces cambios en el código SQL, asegúrate de documentarlos con comentarios. Esto puede incluir la fecha y una breve descripción de los cambios que se han realizado.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <strong>5.</strong> Si bien los comentarios son una herramienta valiosa para mejorar la legibilidad del código SQL, no es necesario abusar de ellos. Los comentarios deben ser utilizados de manera estratégica y efectiva para destacar los puntos importantes y ayudar a otros desarrolladores a comprender el código. Además, los comentarios deben ser breves y concisos para no abrumar el código y mantener su claridad. Recuerda, el objetivo principal de los comentarios es mejorar la legibilidad, no ocultar la complejidad del código. Con un uso adecuado de los comentarios, tu código SQL será más fácil de entender y mantener para ti y para otros desarrolladores.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+    </main>
+
+    <div class="caja">
+        
+        <article id="publicoImagen">
+            <section>
+                <div>
+                    <img src="../assets/images/blog/publico_1.svg" alt="">
+                </div>
+            </section>
+        </article>
+
+    </div>
+    
+    <div class="caja">
+
+        <article id="suscribete">
+            <section class="suscribete_titulo">
+                <div>
+                    <h3>Aprende cosas nuevas cada día: suscríbete</h3>
+                    <p>Descubre nuevos temas, consejos útiles y mucho más.</p>
+                </div>
+            </section>
+            <section class="suscribete_formulario">
+                <form class="" action="" method="">
+                    <div>
+                        <!-- <label for="nombre">¿Cual es tu nombre?</label> -->
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div>
+                        <!-- <label for="correo">¿Cual es tu correo?</label> -->
+                        <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </article>
+
+    </div>
+
+    <div class="caja">
+
+        <article id="enFamilia">
+            <section class="enFamilia_titulo">
+                <div>
+                    <h2>Disfruta:</h2>
+                </div>
+            </section>
+            <section class="enFamilia_disfruta">
+                <ul>
+                    <li>
+                        <a href="" class="enFamilia_disfruta_detalle" target="_blank">
+                            <div class="enFamilia_disfruta_detalle_titulo">
+                                <div>
+                                    <h3>Domina las variables en JavaScript como un experto: Guía completa</h3>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                                    <p>soyceros</p>
+                                    <p>10739 Puntos</p>
+                                    <p>Hace 3 días</p>
+                                </div>
+                            </div>
+                            <div class="enFamilia_disfruta_detalle_img">
+                                <img src="../assets/images/blog/blog.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="enFamilia_disfruta_detalle" target="_blank">
+                            <div class="enFamilia_disfruta_detalle_titulo">
+                                <div>
+                                    <h3>Domina las variables en JavaScript como un experto: Guía completa</h3>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                                    <p>soyceros</p>
+                                    <p>10739 Puntos</p>
+                                    <p>Hace 3 días</p>
+                                </div>
+                            </div>
+                            <div class="enFamilia_disfruta_detalle_img">
+                                <img src="../assets/images/blog/blog.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="enFamilia_disfruta_detalle" target="_blank">
+                            <div class="enFamilia_disfruta_detalle_titulo">
+                                <div>
+                                    <h3>Domina las variables en JavaScript como un experto: Guía completa</h3>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                                    <p>soyceros</p>
+                                    <p>10739 Puntos</p>
+                                    <p>Hace 3 días</p>
+                                </div>
+                            </div>
+                            <div class="enFamilia_disfruta_detalle_img">
+                                <img src="../assets/images/blog/blog.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        
+    </div>
+
+    <div class="caja">
+
+        <article id="descubre">
+            <section class="descubre_titulo">
+                <div>
+                    <h2>Descubre:</h2>
+                </div>
+            </section>
+            <section class="descubre_disfruta">
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/aprender.png" alt="">
+                    </div>
+                    <div>
+                        <p>Aprende algo nuevo cada día</p>
+                    </div>
+                </div>
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/mente.png" alt="">
+                    </div>
+                    <div>
+                        <p>Enriquece tu mente y expande tu horizonte</p>
+                    </div>
+                </div>
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/lectura.png" alt="">
+                    </div>
+                    <div>
+                        <p>La lectura abre puertas a la creatividad y la imaginación</p>
+                    </div>
+                </div>
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/aventuras.png" alt="">
+                    </div>
+                    <div>
+                        <p>Sumérgete en historias fascinantes y vive aventuras inolvidables</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+    </div>
+
+    <footer class="caja">
+        
+        <article id="detallesPagina">
+            <section>
+                <div>
+                    <p>Aprende con nosotros en:</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/DataPrivacity" target="_blank">
+                            <img src="../assets/images/twitter.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/DataPrivacity/" target="_blank">
+                            <img src="../assets/images/instagram.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/dataprivacity/" target="_blank">
+                            <img src="../assets/images/facebook.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@dataprivacity" target="_blank">
+                            <img src="../assets/images/youtube.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/dataprivacity" target="_blank">
+                            <img src="../assets/images/linkedin.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>Alojamos proyectos en:</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://gitlab.com/DataPrivacity" target="_blank">
+                            <img src="../assets/images/gitlab.svg" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/DataPrivacity" target="_blank">
+                            <img src="../assets/images/github.svg" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>Descarga nuestros manuales en:</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://drive.google.com/drive/folders/1uHOoUbx83PSKySfbxBOqwlthUA6ofHYP?usp=sharing" target="_blank">
+                            <img src="../assets/images/drive.svg" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>Impulsa tu empresa con nosotros</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href=".">
+                            <img src="../assets/images/cabecera/logo.png" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>&copy; 2023 Dataprivacity Todos los derechos reservados</p>
+                </div>
+            </section>
+        </article>
+
+    </footer>
+
+    <!-- Start: Prism para resaltar -->
+    <script src="../assets/custom/styles/prism/prism.min.js"></script>
+    <!-- End: Prism para resaltar -->
+    
+</body>
+</html>

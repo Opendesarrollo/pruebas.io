@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Start: detalles de la pagina -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Variables en JavaScript, Declaración de variables, Identificación de variable, Asignación de variables, Tipos de datos en JavaScript">
+    <title>Domina las variables en JavaScript como un experto - DataPrivacity</title>
+    <meta name="description" content="Conviértete en un experto en el manejo de variables en JavaScript. Desde la declaración de variables hasta su uso, descubre cómo utilizarlas de manera efectiva para crear aplicaciones dinámicas y eficientes. ¡Conviértete en un maestro de las variables en JavaScript hoy mismo!">
+    <link rel="canonical" href="https://dataprivacity.com/blog/domina-variables-javascript-experto" />
+    <!-- End: detalles de la pagina -->
+
+    <!-- Start: Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Domina las variables en JavaScript como un experto">
+    <meta property="og:description" content="Conviértete en un experto en el manejo de variables en JavaScript. Desde la declaración de variables hasta su uso, descubre cómo utilizarlas de manera efectiva para crear aplicaciones dinámicas y eficientes. ¡Conviértete en un maestro de las variables en JavaScript hoy mismo!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dataprivacity.com/blog/domina-variables-javascript-experto">
+    <meta property="og:image" content="https://debug.dataprivacity.com/assets/images/blog/blog.jpg">
+    <!-- End: Open Graph para compartir en redes sociales -->
+
+    <!-- Start: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@DataPrivacity">
+    <meta name="twitter:title" content="Domina las variables en JavaScript como un experto">
+    <meta name="twitter:description" content="Conviértete en un experto en el manejo de variables en JavaScript. Desde la declaración de variables hasta su uso, descubre cómo utilizarlas de manera efectiva para crear aplicaciones dinámicas y eficientes. ¡Conviértete en un maestro de las variables en JavaScript hoy mismo!">
+    <meta name="twitter:image" content="https://debug.dataprivacity.com/assets/images/blog/blog.jpg">
+    <!-- End: Twitter Card -->
+
+    <!-- Start: icono -->
+    <link rel="icon" type="image/png" href="../assets/images/cabecera/logo.png">
+    <!-- End: icono -->
+
+    <!-- Start: estilos -->
+    <link rel="stylesheet" href="../assets/styles/origen.css" />
+    <link rel="stylesheet" media="(min-width: 480px)" href="../assets/styles/movil.css" />
+    <link rel="stylesheet" media="(min-width: 768px)" href="../assets/styles/tableta.css" />
+    <link rel="stylesheet" media="(min-width: 1024px)" href="../assets/styles/computadora.css" />
+    <!-- End: estilos -->
+
+    <!-- Start: fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <!-- Fuente estecial para el blog -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- End: fuente -->
+    
+    <!-- Start: Prism para resaltar -->
+    <link rel="stylesheet" href="../assets/custom/styles/prism/prism.min.css" />
+    <style>
+        .codigo{
+            max-width: 100% !important;
+            overflow-x: auto !important;
+        }
+        .codigo pre{
+            background: white;
+            border-radius: 14px;
+            margin: 0;
+        }
+    </style>
+    <!-- Start: Prism para resaltar -->
+
+</head>
+<body>
+    
+    <nav class="caja">
+
+        <article id="barraDeNavegacion">
+            <section class="barraDeNavegacion_logo">
+                <a href="../">
+                    <img src="../assets/images/cabecera/logo.png" alt="Logo">
+                    <p>DataPrivacity</p>
+                </a>
+            </section>
+            <input type="checkbox" id="miMenu">
+            <section class="barraDeNavegacion_boton">
+                <div>
+                    <label for="miMenu"><span></span></label>
+                </div>
+            </section>
+            <section class="barraDeNavegacion_menu">
+                <ul>
+                    <li>
+                        <a href="../">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./">Blog</a>
+                    </li>
+                    <li>
+                        <a href=".././portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href=".././precios">Precios</a>
+                    </li>
+                    <li>
+                        <a href=".././contacto">Contacto</a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+    </nav>
+
+    <header class="caja">
+
+        <article id="blogDetalleCabecera">
+            <section class="blogDetalleCabecera_cero">
+                <div>
+                    <h1>Domina las variables en JavaScript como un experto</h1>
+                </div>
+            </section>
+            <section class="blogDetalleCabecera_uno">
+                <a href="https://gitlab.com/DataPrivacity" target="_blank">
+                    <p>Código en Gitlab.com/DataPrivacity</p>
+                </a>
+            </section>
+            <section class="blogDetalleCabecera_dos">
+                <a href="./../soyceros" target="_blank">
+                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                    <p>soyceros</p>
+                </a>
+                <div>
+                    <p>15056 Puntos</p>
+                </div>
+                <div>
+                    <p>Hace 3 días</p>
+                </div>
+            </section>
+        </article>
+
+    </header>
+
+    <main class="caja">
+        
+        <article id="blogDetalleCuerpo">
+            <section class="blogDetalleCuerpo_redes">
+                <div class="blogDetalleCuerpo_redes_titulo">
+                    <p>Comparte en:</p>
+                </div>
+                <ul class="blogDetalleCuerpo_redes_listado">
+                    <li>
+                        <a href="" class="encanta" target="_blank">
+                            <img src="../assets/images/blog/encanta.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?url=https://dataprivacity.com/blog/domina-variables-javascript-experto" class="red" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/images/blog/twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://dataprivacity.com/blog/domina-variables-javascript-experto" class="red" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/images/blog/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dataprivacity.com/blog/domina-variables-javascript-experto" class="red" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/images/blog/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="blogDetalleCuerpo_contenido">
+                <div>
+                    <p>
+                        ¡Bienvenido al emocionante y fascinante mundo de la programación! Si acabas de empezar con JavaScript, es importante entender cómo funcionan las variables. Las variables son elementos fundamentales en la programación y son esenciales para cualquier proyecto. En este blog, vamos a profundizar en las variables en JavaScript para que puedas dominarlas como un experto.
+                    </p>
+                </div>
+                <div>
+                    <h2>Primero, ¿qué es una variable?</h2>
+                </div>
+                <div>
+                    <p>
+                        Una variable es un espacio en la memoria del ordenador que se utiliza para almacenar datos. En términos más simples, es como una caja en la que puedes guardar cosas. La diferencia es que en una variable puedes guardar datos que serán utilizados por tu programa.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        En JavaScript, las variables se utilizan para almacenar diferentes tipos de datos, como números, cadenas de texto, valores booleanos y más. En JavaScript, puedes declarar variables utilizando tres palabras clave diferentes: <strong>var</strong>, <strong>let</strong> y <strong>const</strong>.
+                    </p>
+                </div>
+                <div>
+                    <h3>Declaración de variables</h3>
+                </div>
+                <div>
+                    <p>
+                        La declaración de una variable en JavaScript se hace mediante las palabras clave <strong>var</strong>, <strong>let</strong> o <strong>const</strong>, seguida del nombre que le quieras dar a la variable. Por ejemplo, si queremos declarar una variable llamada nombre, podríamos hacerlo así:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var nombre;
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <h3>Asignación de valores</h3>
+                </div>
+                <div>
+                    <p>
+                        Una vez que hayas declarado una variable, puedes asignarle un valor utilizando el operador de asignación <strong>=</strong>. Por ejemplo, si queremos asignar el valor <strong>"Juan"</strong> a la variable nombre, podríamos hacerlo así:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+nombre = "Juan";
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <h3>Declaración y Asignación</h3>
+                </div>
+                <div>
+                    <p>
+                        También puedes declarar y asignar una variable en la misma línea de código, como se muestra a continuación:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var edad = 25;
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <h2>Tipos de datos en JavaScript</h2>
+                </div>
+                <div>
+                    <p>
+                        Ahora que sabemos cómo declarar una variable en JavaScript, es importante entender los diferentes tipos de datos que podemos almacenar en ellas. En JavaScript, existen cinco tipos de datos primitivos:
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        1. Números: se utilizan para almacenar valores numéricos. Los números pueden ser enteros o decimales. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var miNumero = 10;
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        2. Cadenas de texto: se utilizan para almacenar texto. Las cadenas de texto se escriben entre comillas simples <strong>('')</strong> o comillas dobles <strong>("")</strong>. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var miTexto = "Esto es una cadena de texto";
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        3. Valores booleanos: se utilizan para almacenar valores de verdadero o falso. Los valores verdaderos se representan con la palabra clave <strong>true</strong> y los valores falsos con la palabra clave <strong>false</strong>. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var miBooleano = true;
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        4. Null: se utiliza para representar la ausencia intencional de cualquier objeto o valor. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var miNull = null;
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        5. Undefined: se utiliza para representar una variable que aún no ha sido asignada a ningún valor. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var miVariable;
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        6. Objetos: se utilizan para almacenar colecciones de datos. Los objetos se definen mediante llaves <strong>{}</strong> y contienen <strong>propiedades</strong> y <strong>valores</strong>. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var persona = {
+    nombre: "Juan",
+    edad: 30,
+    esMayorDeEdad: true
+};
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        7. Arreglos: se utilizan para almacenar una lista ordenada de elementos. Los arreglos se definen mediante corchetes <strong>[]</strong> y contienen elementos separados por <strong>comas</strong>. Por ejemplo:
+                    </p>
+                </div>
+                <div class="codigo">
+                    <pre>
+                        <code class="language-javascript">
+var frutas = ["manzana", "plátano", "naranja"];
+                        </code>
+                    </pre>
+                </div>
+                <div>
+                    <p>
+                        En resumen, una variable en JavaScript es un contenedor de información que te permite almacenar y manipular datos de diferentes tipos. Puedes declarar variables utilizando las palabras clave <strong>var</strong>, <strong>let</strong> o <strong>const</strong>, y asignarles valores utilizando el operador de asignación =. JavaScript admite varios tipos de datos diferentes, como números, cadenas de texto y booleanos, y puedes realizar operaciones matemáticas y concatenar cadenas de texto con variables.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+    </main>
+
+    <div class="caja">
+        
+        <article id="publicoImagen">
+            <section>
+                <div>
+                    <img src="../assets/images/blog/publico_1.svg" alt="">
+                </div>
+            </section>
+        </article>
+
+    </div>
+    
+    <div class="caja">
+
+        <article id="suscribete">
+            <section class="suscribete_titulo">
+                <div>
+                    <h3>Aprende cosas nuevas cada día: suscríbete</h3>
+                    <p>Descubre nuevos temas, consejos útiles y mucho más.</p>
+                </div>
+            </section>
+            <section class="suscribete_formulario">
+                <form class="" action="" method="">
+                    <div>
+                        <!-- <label for="nombre">¿Cual es tu nombre?</label> -->
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div>
+                        <!-- <label for="correo">¿Cual es tu correo?</label> -->
+                        <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </article>
+
+    </div>
+
+    <div class="caja">
+
+        <article id="enFamilia">
+            <section class="enFamilia_titulo">
+                <div>
+                    <h2>Disfruta:</h2>
+                </div>
+            </section>
+            <section class="enFamilia_disfruta">
+                <ul>
+                    <li>
+                        <a href="" class="enFamilia_disfruta_detalle" target="_blank">
+                            <div class="enFamilia_disfruta_detalle_titulo">
+                                <div>
+                                    <h3>Domina las variables en JavaScript como un experto: Guía completa</h3>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                                    <p>soyceros</p>
+                                    <p>10739 Puntos</p>
+                                    <p>Hace 3 días</p>
+                                </div>
+                            </div>
+                            <div class="enFamilia_disfruta_detalle_img">
+                                <img src="../assets/images/blog/blog.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="enFamilia_disfruta_detalle" target="_blank">
+                            <div class="enFamilia_disfruta_detalle_titulo">
+                                <div>
+                                    <h3>Domina las variables en JavaScript como un experto: Guía completa</h3>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                                    <p>soyceros</p>
+                                    <p>10739 Puntos</p>
+                                    <p>Hace 3 días</p>
+                                </div>
+                            </div>
+                            <div class="enFamilia_disfruta_detalle_img">
+                                <img src="../assets/images/blog/blog.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="enFamilia_disfruta_detalle" target="_blank">
+                            <div class="enFamilia_disfruta_detalle_titulo">
+                                <div>
+                                    <h3>Domina las variables en JavaScript como un experto: Guía completa</h3>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/blog/usuario/usuario_0.png" alt="">
+                                    <p>soyceros</p>
+                                    <p>10739 Puntos</p>
+                                    <p>Hace 3 días</p>
+                                </div>
+                            </div>
+                            <div class="enFamilia_disfruta_detalle_img">
+                                <img src="../assets/images/blog/blog.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        
+    </div>
+
+    <div class="caja">
+
+        <article id="descubre">
+            <section class="descubre_titulo">
+                <div>
+                    <h2>Descubre:</h2>
+                </div>
+            </section>
+            <section class="descubre_disfruta">
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/aprender.png" alt="">
+                    </div>
+                    <div>
+                        <p>Aprende algo nuevo cada día</p>
+                    </div>
+                </div>
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/mente.png" alt="">
+                    </div>
+                    <div>
+                        <p>Enriquece tu mente y expande tu horizonte</p>
+                    </div>
+                </div>
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/lectura.png" alt="">
+                    </div>
+                    <div>
+                        <p>La lectura abre puertas a la creatividad y la imaginación</p>
+                    </div>
+                </div>
+                <div class="descubre_disfruta_detalle">
+                    <div>
+                        <img src="../assets/images/blog/aventuras.png" alt="">
+                    </div>
+                    <div>
+                        <p>Sumérgete en historias fascinantes y vive aventuras inolvidables</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+    </div>
+
+    <footer class="caja">
+        
+        <article id="detallesPagina">
+            <section>
+                <div>
+                    <p>Aprende con nosotros en:</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/DataPrivacity" target="_blank">
+                            <img src="../assets/images/twitter.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/DataPrivacity/" target="_blank">
+                            <img src="../assets/images/instagram.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/dataprivacity/" target="_blank">
+                            <img src="../assets/images/facebook.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@dataprivacity" target="_blank">
+                            <img src="../assets/images/youtube.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/dataprivacity" target="_blank">
+                            <img src="../assets/images/linkedin.svg" alt="@DataPrivacity logo">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>Alojamos proyectos en:</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://gitlab.com/DataPrivacity" target="_blank">
+                            <img src="../assets/images/gitlab.svg" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/DataPrivacity" target="_blank">
+                            <img src="../assets/images/github.svg" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>Descarga nuestros manuales en:</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="https://drive.google.com/drive/folders/1uHOoUbx83PSKySfbxBOqwlthUA6ofHYP?usp=sharing" target="_blank">
+                            <img src="../assets/images/drive.svg" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>Impulsa tu empresa con nosotros</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href=".">
+                            <img src="../assets/images/cabecera/logo.png" alt="@DataPrivacity">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <p>&copy; 2023 Dataprivacity Todos los derechos reservados</p>
+                </div>
+            </section>
+        </article>
+
+    </footer>
+
+    <!-- Start: Prism para resaltar -->
+    <script src="../assets/custom/styles/prism/prism.min.js"></script>
+    <!-- End: Prism para resaltar -->
+    
+</body>
+</html>
